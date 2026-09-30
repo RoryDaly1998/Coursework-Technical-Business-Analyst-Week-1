@@ -122,12 +122,12 @@ Use this template after reviewing the stakeholder notes.
 
 | Stakeholder | Quote or observation | Theme | Business impact | Confidence |
 |---|---|---|---|---|
-| Customer | "Customers would pay more readily if they understood exactly what they owe and could see options." | Customer control and self-service | Clear balances and visible options may make customers more willing to pay and better able to choose how to resolve what they owe. |  |
-| Representative | "We do not have a way to identify which cases are straightforward versus which require specialist handling." | Case complexity, triage, and human judgment | Distinguishing routine from specialist cases can reduce delays from misrouted work and ensure complex cases receive appropriate attention. |  |
-| Representative | "We reach out to customers in a random order rather than any strategic sequence." | Work prioritisation and contact strategy | Strategic sequencing can focus effort on timely, high-priority outreach and improve the chance of recovery. |  |
-| Representative | "We have cases sitting in 'awaiting callback' status for months because the promised date was never recorded." | Follow-up tracking and case continuity | Recording and tracking callback dates can reduce stalled cases and missed customer commitments. |  |
-| Compliance | "The audit trail is scattered across email, spreadsheets, and the legacy database, making compliance reviews a nightmare." | Fragmented records, inconsistent data, and audit trail | A complete case history can reduce review effort and help demonstrate what happened for compliance and audit purposes. |  |
-| Representative | "The database cannot handle the complexity of modern lending products and customer situations." | Legacy systems, scale, and front-line productivity | Better support for complex products and circumstances can reduce handling friction and help representatives determine appropriate next actions. |  |
+| Operations Analyst | "Customers would pay more readily if they understood exactly what they owe and could see options." | Customer control and self-service | Clear balances and visible options may make customers more willing to pay and better able to choose how to resolve what they owe. | Medium: many pieces of evidence but no hard numbers and no quotes from customers themselves. |
+| Compliance Liaison | "We do not have a way to identify which cases are straightforward versus which require specialist handling." | Case complexity, triage, and human judgment | Distinguishing routine from specialist cases can reduce delays from misrouted work and ensure complex cases receive appropriate attention. | High: many quotes from different departments clearly laying out the problem. |
+| Service Design Lead | "We reach out to customers in a random order rather than any strategic sequence." | Work prioritisation and contact strategy | Strategic sequencing can focus effort on timely, high-priority outreach and improve the chance of recovery. | Medium: several quotes agreeing but no clear case for the harm it's causing the business. |
+| Finance Analyst | "We have cases sitting in 'awaiting callback' status for months because the promised date was never recorded." | Follow-up tracking and case continuity | Recording and tracking callback dates can reduce stalled cases and missed customer commitments. | High: many quotes across departments stating what specifically is going wrong. |
+| Operations Manager | "The audit trail is scattered across email, spreadsheets, and the legacy database, making compliance reviews a nightmare." | Fragmented records, inconsistent data, and audit trail | A complete case history can reduce review effort and help demonstrate what happened for compliance and audit purposes. | High: Many examples with specific pain points in the process. |
+| Systems Administrator | "The database cannot handle the complexity of modern lending products and customer situations." | Legacy systems, scale, and front-line productivity | Better support for complex products and circumstances can reduce handling friction and assist future scaling. | High: many quotes with specific examples of where the current system fails. |
 
 ## Step 3: Write JTBD statements
 
@@ -159,7 +159,7 @@ Use this template after reviewing the stakeholder notes.
 
 **JTBD statement:** When multiple customer accounts need contact, I want to sequence outreach strategically, so that customers are contacted at an appropriate time and recovery effort is focused.
 
-**Stakeholder group:** Representative; Operations Manager
+**Stakeholder group:** Representative; Operations Manager; Collections
 
 ### Follow-up tracking and case continuity
 
@@ -169,7 +169,7 @@ Use this template after reviewing the stakeholder notes.
 
 **JTBD statement:** When a case is awaiting a promised callback, I want to record and track the promised date, so that the callback is completed on time and the case does not remain stalled.
 
-**Stakeholder group:** Representative; Operations Manager
+**Stakeholder group:** Operations Manager; Collections; Finance Manager
 
 ### Fragmented records, inconsistent data, and audit trail
 
@@ -189,29 +189,45 @@ Use this template after reviewing the stakeholder notes.
 
 **JTBD statement:** When a case involves a modern lending product or complex customer circumstances, I want to assess its details with the information and system capacity available, so that I can determine and carry out the appropriate next action.
 
-**Stakeholder group:** Representative; Operations Manager; Finance Manager
+**Stakeholder group:** Representative; Operations Manager
 
 ### JTBD table
 
 | JTBD ID | Actor | Statement | Evidence link | Portal relevance | Priority |
 |---|---|---|---|---|---|
-| JTBD-01 | Customer | When I need to address an overdue balance, I want to understand clearly what I owe and what choices are available, so that I can decide how to manage it. | SN-065 ([quote](JTBD.md#customer-control-and-self-service)) |  |  |
-| JTBD-02 | Representative; Operations Manager | When a collections case needs attention, I want to identify whether it is straightforward or requires specialist handling, so that it receives the appropriate level of support. | SN-039 ([quote](JTBD.md#case-complexity-triage-and-human-judgment)) |  |  |
-| JTBD-03 | Representative; Operations Manager | When multiple customer accounts need contact, I want to sequence outreach strategically, so that customers are contacted at an appropriate time and recovery effort is focused. | SN-077 ([quote](JTBD.md#work-prioritisation-and-contact-strategy)) |  |  |
-| JTBD-04 | Representative; Operations Manager | When a case is awaiting a promised callback, I want to record and track the promised date, so that the callback is completed on time and the case does not remain stalled. | SN-007 ([quote](JTBD.md#follow-up-tracking-and-case-continuity)) |  |  |
-| JTBD-05 | Representative; Operations Manager; Compliance | When a compliance review requires reconstructing what happened to a case, I want to rely on a complete record of its activity across systems, so that I can verify the case history without searching fragmented records. | SN-008 ([quote](JTBD.md#fragmented-records-inconsistent-data-and-audit-trail)) |  |  |
-| JTBD-06 | Representative; Operations Manager; Finance Manager | When a case involves a modern lending product or complex customer circumstances, I want to assess its details with the information and system capacity available, so that I can determine and carry out the appropriate next action. | SN-035 ([quote](JTBD.md#legacy-systems-scale-and-front-line-productivity)) |  |  |
+| JTBD-01 | Customer | When I need to address an overdue balance, I want to understand clearly what I owe and what choices are available, so that I can decide how to manage it. | SN-065 | High: exactly the kind of concern a self-serve portal will look to address. | High: improves customer experience, takes pressure of reps, enables easier data management strategies. |
+| JTBD-02 | Representative; Operations Manager | When a collections case needs attention, I want to identify whether it is straightforward or requires specialist handling, so that it receives the appropriate level of support. | SN-039 | Medium: not strictly in scope of the project to be able to classify cases, however doing so would help the automated system focus purely on cases it is best suited to solve. | Medium: not strictly necessary for a working prototype but would help the portal to run smoother and focus on only relevant cases so we are not trying to build something which works for every case. |
+| JTBD-03 | Representative; Operations Manager | When multiple customer accounts need contact, I want to sequence outreach strategically, so that customers are contacted at an appropriate time and recovery effort is focused. | SN-077 | Low: customer outreach is not in scope for this project. | Low: by taking simple cases off the hands of reps we will help with this concern but it is not a concern of the self-serve portal how to outreach to customers. |
+| JTBD-04 | Representative; Operations Manager | When a case is awaiting a promised callback, I want to record and track the promised date, so that the callback is completed on time and the case does not remain stalled. | SN-007 | Low: the brief of the portal is to give the customer the ability to resolve simple account actions themselves, it does not need to handle callbacks. | Low: it is not the portal's responsibility to handle callbacks. |
+| JTBD-05 | Representative; Operations Manager; Compliance | When a compliance review requires reconstructing what happened to a case, I want to rely on a complete record of its activity across systems, so that I can verify the case history without searching fragmented records. | SN-008 | High: regulatory compliance needs to be a core concern for our portal which is handling customer data. | High: potential for fines and reputation loss to the business if our portal mishandles data compliance and regulation. |
+| JTBD-06 | Representative; Operations Manager; Finance Manager | When a case involves a modern lending product or complex customer circumstances, I want to assess its details with the information and system capacity available, so that I can determine and carry out the appropriate next action. | SN-035 | Medium: it is not in the brief for the portal to help reps deal with complex cases but the portal will need to have the capability to pass complex cases off to a human if it cannot deal with them itself. | Medium: it's important to be able to interact with customer data for more complex cases but the narrow scope of this project is to give customers the ability to complete simple actions themselves. |
 
 ## Step 4: Top 3 justification
 
-For each of your top 3 JTBDs, write:
-- why it matters now
-- which evidence supports it
-- how it should influence Phase 1
+### JTBD-01: Customer control and self-service
+
+- **Why it matters now:** Customers may be more willing to pay when they understand the balance and available options. Clear information may also reduce avoidable reliance on phone contact.
+- **Evidence:** SN-065 says customers would pay more readily if they understood what they owe and could see options. SN-001 highlights the value of control and transparency, while SN-017 reports that many customers do not know they can pay online.
+- **Phase 1 influence:** Make the balance and available resolution options clear, and ensure customers can understand how to take the next step without needing to call for basic information.
+
+### JTBD-02: Case complexity, triage, and human judgment
+
+- **Why it matters now:** Self-service is only appropriate when cases are within its safe and understandable scope. Mixing routine and complex work slows handling, while hardship, vulnerability, and regulatory exceptions require human judgment.
+- **Evidence:** SN-039 identifies the inability to distinguish straightforward cases from those needing specialists. SN-057 says simple and complex cases mixed in one queue slow everything down. SN-054 and SN-055 note that some cases require human judgment or representative-led handling.
+- **Phase 1 influence:** Define and test eligibility criteria for routine self-service cases, with clear escalation to a representative for specialist, hardship, vulnerability, or otherwise unsupported cases. Preserve case context during handoff.
+
+### JTBD-05: Fragmented records, inconsistent data, and audit trail
+
+- **Why it matters now:** A customer-facing portal adds activity that must be accurately connected to the existing case history. Fragmented or inconsistent records make reviews difficult and create risk when the business needs to demonstrate what happened.
+- **Evidence:** SN-008 describes audit information scattered across email, spreadsheets, and the legacy database. SN-066 says cross-system audit trails make it nearly impossible to demonstrate case history. SN-056 notes that status updates record that a case changed but not why, and SN-015 describes conflicting statuses across systems.
+- **Phase 1 influence:** Specify how portal and representative actions, status changes, and their reasons are recorded in a traceable case history. Validate that the history remains consistent across systems and can support compliance review.
 
 ## Quality check
 
 Ask yourself:
 - Does this describe a need instead of a feature?
+    All three JTBD statements describe a real need, handling basic customer account actions, classifying cases to understand what type of support each needs and being compliant with regulation and auditing rules.
 - Would the job still exist if the screen or tool changed?
+    All three of these jobs would need to be done regardless of how the tool is set up.
 - Can I point to real evidence behind the priority?
+    All three jobs are backed up by several quotes from different people with a clear explanation of how they create a pain point in the business currently.
