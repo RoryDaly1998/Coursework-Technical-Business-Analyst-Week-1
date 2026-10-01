@@ -1,68 +1,10 @@
 # Pain Points in the Current Collections Process
 
-This document catalogs the 12 identified pain points from the legacy collections process map, traces the evidence for each, and describes how each pain point affects customers, representatives, and managers.
+This document catalogs the 7 identified pain points from the legacy collections process map, traces the evidence for each, and describes how each pain point affects customers, representatives, and managers.
 
 ---
 
-## 1. Account Status Inconsistency
-
-**Problem:** Accounts may not be updated accurately, resulting in incorrect status information that cascades through the workflow.
-
-**Evidence Source:** 
-- **Stakeholder Quote:** *"The data quality is so poor that we stopped running management reports altogether."* (SN-012, Collections Representative)
-- **Stakeholder Quote:** *"A case marked 'resolved' in one system might be 'in progress' in another."* (SN-015, Compliance Liaison)
-- **Dataset Observation:** Recovery activity tracker shows duplicate status checks (duplicate_check_flag=Y) on the same accounts, indicating representatives verifying information multiple times due to distrust in data accuracy.
-
-**Stakeholder Impact:**
-
-| Perspective | Experience |
-|---|---|
-| **Customer** | Receives conflicting information about their status; may believe a case is closed when collections still considers it active, or vice versa. Erodes trust. |
-| **Representative** | Must manually verify status across systems before proceeding. Loses time per account verifying data reliability. Creates compliance risk if wrong status is used for decisions. |
-| **Manager** | Cannot rely on reporting for KPIs or compliance audits. Must commission manual data reviews. Reporting credibility compromised. |
-
----
-
-## 2. Cross-Checking Complexity and Human Error
-
-**Problem:** Representatives must manually reconcile information across spreadsheets, email history, and the legacy database. This process is time-consuming and error-prone.
-
-**Evidence Source:**
-- **Stakeholder Quote:** *"The spreadsheet is now two hundred sheets thick and no one knows what half of them do."* (SN-025, Operations Analyst)
-- **Stakeholder Quote:** *"New representatives take two weeks longer to reach productivity because they have to learn the spreadsheet system."* (SN-020, Collections Representative)
-- **Operational Observation:** From BPMN, representatives must cross-check spreadsheet AND email history as distinct steps before contacting the customer.
-- **Dataset Observation:** Activity tracker shows varied minutes_spent (3-14 minutes) on routine status_check tasks, suggesting inconsistent efficiency and manual rework.
-
-**Stakeholder Impact:**
-
-| Perspective | Experience |
-|---|---|
-| **Customer** | Delayed response time to their account. May receive a follow-up contact already sent to them, or a promise acknowledgement the rep was not aware of. |
-| **Representative** | Spends time checking manual records instead of focusing on customer contact. New hires need extended onboarding. Experienced reps build workarounds, creating non-standard processes. |
-| **Manager** | Onboarding costs rise. Cannot standardize processes because workarounds are essential to efficiency. Quality varies by individual. |
-
----
-
-## 3. Duplicate Customer Contact and Re-contact
-
-**Problem:** The collections database does not sync with the email tracker, causing representatives to re-contact customers who were already promised callbacks.
-
-**Evidence Source:**
-- **Stakeholder Quote:** *"The collections database does not sync with the email tracker, so representatives often re-contact customers who were already promised callbacks."* (SN-011, Collections Representative)
-- **Stakeholder Quote:** *"Customers go through the contact process multiple times because we have no way to prevent re-contact."* (SN-028, Collections Representative)
-- **Dataset Observation:** Recovery activity tracker flags duplicate_check_flag=Y on accounts ACC-10001, ACC-10002, ACC-10007, ACC-10009, and ACC-10010, indicating multiple representatives checking the same account in short succession. Account ACC-10003 shows 3 status checks in 14 days by different representatives.
-
-**Stakeholder Impact:**
-
-| Perspective | Experience |
-|---|---|
-| **Customer** | Called multiple times about the same issue. First call establishes a promise-to-pay or arrangement; second call is unwelcome and undermines trust. Wastes customer time and increases complaint risk. |
-| **Representative** | Wastes time reaching out to customers who already have pending arrangements. Creates customer dissatisfaction that doesn't reflect the rep's competence. |
-| **Manager** | Compliance risk: unnecessary contact attempts could trigger customer complaints. Inefficient resource allocation, effort spent on re-contact instead of new cases. Complaint rates rise. |
-
----
-
-## 4. Multi-Source Update Discrepancies
+## 1. Multi-Source Update Discrepancies
 
 **Problem:** Representatives must update the same information across multiple systems (legacy database, spreadsheet, email threads), creating opportunities for discrepancies and wasting time.
 
@@ -81,7 +23,7 @@ This document catalogs the 12 identified pain points from the legacy collections
 
 ---
 
-## 5. Manual Record Update and Discrepancies
+## 2. Manual Record Update and Discrepancies
 
 **Problem:** Manually updating customer records across multiple locations is time-consuming and frequently results in data discrepancies between systems.
 
@@ -100,7 +42,7 @@ This document catalogs the 12 identified pain points from the legacy collections
 
 ---
 
-## 6. Broken Arrangements and Re-Contact on Already-Promised Accounts
+## 3. Broken Arrangements and Re-Contact on Already-Promised Accounts
 
 **Problem:** Accounts with payment arrangements or promised callbacks are not flagged reliably. They re-enter the contact queue, triggering unnecessary follow-up calls for money already promised.
 
@@ -115,11 +57,11 @@ This document catalogs the 12 identified pain points from the legacy collections
 |---|---|
 | **Customer** | Called back to pursue payment on a debt for which they already made an arrangement or promise. Second call damages relationship and suggests disorganization on the creditor's side. May refuse to engage further. |
 | **Representative** | Contacts customer who has already engaged. Wastes time. Customer may become hostile, making the call harder. Reduces overall contact success rate. |
-| **Manager** | Lost productivity: 10-15% of contacts are unnecessary re-contacts. Account resolution takes longer. Customer satisfaction scores worsen. Increased complaint volume. |
+| **Manager** | Lost productivity, account resolution takes longer. Customer satisfaction scores worsen. Increased complaint volume. |
 
 ---
 
-## 7. No System-Driven Arrangement Fulfillment Check
+## 4. No System-Driven Arrangement Fulfillment Check
 
 **Problem:** There is no system prompt or trigger to check whether a customer has fulfilled a promised payment arrangement. Representatives must rely on memory or manual checking.
 
@@ -138,7 +80,7 @@ This document catalogs the 12 identified pain points from the legacy collections
 
 ---
 
-## 8. Poor Visibility of Promise-to-Pay Fulfillment
+## 5. Poor Visibility of Promise-to-Pay Fulfillment
 
 **Problem:** There is no reliable way to track whether customers have fulfilled their payment promises or when those promises are due. This visibility gap prevents timely follow-up and creates false assumptions about account status.
 
@@ -157,45 +99,7 @@ This document catalogs the 12 identified pain points from the legacy collections
 
 ---
 
-## 9. Multiple Source Manual Updates and Discrepancies
-
-**Problem:** Details about customer accounts and payment arrangements must be manually updated in multiple sources (email, spreadsheet, legacy database), leading to version control issues and data inconsistency.
-
-**Evidence Source:**
-- **Stakeholder Quote:** *"Details must be manually updated across multiple sources - can lead to discrepancies."* (From BPMN annotation)
-- **Stakeholder Quote:** *"A single customer can have five separate records in the system from different entry points."* (SN-010, Service Design Lead)
-- **Dataset Observation:** Recovery activity tracker shows the same account (e.g., ACC-10001) with activities logged to different source_systems (spreadsheet, phone, email). Activity ACT-00001 is marked "next_action_unclear" in spreadsheet, but ACT-00003 shows "promise_to_pay" in phone system—unclear which is the system of record.
-
-**Stakeholder Impact:**
-
-| Perspective | Experience |
-|---|---|
-| **Customer** | If they update their contact details via phone, the email system still has the old details. Receives correspondence at the wrong address or phone. May miss important notices. |
-| **Representative** | Spends time updating multiple records for the same change. Each update is a risk point for error. Must then verify that all updates succeeded. |
-| **Manager** | Cannot build a single customer view. Compliance documentation is scattered across systems. Audit trails are incomplete, and reconciliation is manual and time-consuming. |
-
----
-
-## 10. Missed Follow-Ups and Broken Arrangement Management
-
-**Problem:** When agents forget to follow up on an arrangement or promise, there is no system recovery. The account falls between shifts or gaps in the schedule and the action is lost.
-
-**Evidence Source:**
-- **Stakeholder Quote:** *"If an agent forgets to follow up then broken arrangements slip through the cracks."* (From BPMN annotation)
-- **Stakeholder Quote:** *"We lose at least 20% of follow-ups because they fall between shifts and no one owns the handoff."* (SN-040, Data Analyst)
-- **Dataset Observation:** Recovery activity tracker shows accounts with outcome_code like "left_message" but no clear next_follow_up_date populated (e.g., ACT-00011). Accounts ACC-10008 and ACC-10002 have follow-up dates set, but activity shows no scheduled system reminder—entirely manual.
-
-**Stakeholder Impact:**
-
-| Perspective | Experience |
-|---|---|
-| **Customer** | Promised follow-up never materializes. Reaches out to ask if we received their payment or to reschedule but gets no response. Assumes the company is unreliable. |
-| **Representative** | Misses follow-up because shift ended or the reminder was lost. Comes back to the case days later and customer is now upset. Quality metric suffers even though the delay was not the rep's direct fault. |
-| **Manager** | 20% of follow-ups are lost, reducing recovery velocity. Some accounts age unnecessarily and require escalation later. Rework cost is high and invisible in standard metrics. |
-
----
-
-## 11. Time-Consuming Customer Contact Attempts
+## 6. Time-Consuming Customer Contact Attempts
 
 **Problem:** Waiting for customers to answer is time-consuming. A single outbound call attempt may take hours to connect, tying up representative capacity.
 
@@ -214,7 +118,7 @@ This document catalogs the 12 identified pain points from the legacy collections
 
 ---
 
-## 12. Inaccurate Data Undermines Reporting and Compliance
+## 7. Inaccurate Data Undermines Reporting and Compliance
 
 **Problem:** Poor data quality and manual reconciliation mean reports are unreliable. Accounts are often wrongly included or excluded from reports due to inconsistent status updates across systems.
 
@@ -242,4 +146,4 @@ The current process creates **stress and inefficiency at all three levels**, but
 - **Representatives** are stuck between manual workarounds and unreliable systems, spending more time verifying data than helping customers. New hires struggle for weeks.
 - **Managers** operate with incomplete and unreliable data, cannot report confidently, and face compliance risk from scattered audit trails and duplicate or missed actions.
 
-All 12 pain points stem from the fundamental challenge: **no single integrated system of record**, forcing manual synchronization across multiple tools, which introduces errors and consumes time that could be spent on customer outcomes.
+All 7 pain points stem from the fundamental challenge: **no single integrated system of record**, forcing manual synchronization across multiple tools, which introduces errors and consumes time that could be spent on customer outcomes.
