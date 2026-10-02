@@ -1,0 +1,10 @@
+Rank,Opportunity,Implementation Effort,Confidence In Assumptions,Relevance
+1,OP-07,Medium,Medium,High
+2,OP-01,Low,High,Medium
+3,OP-02,Low,Medium,Medium
+4,OP-06,Medium,Low,Medium
+5,OP-05,Low,Medium,Low
+,,,,
+Summary:,"The best opportunity by far is opportunity 7, which is building a self-serve portal for customers to take basic account actions and making payments.
+It results in by far the best ROI, is highly relevant to the brief and we have reasonable confidence in the predicted numbers.
+The only downside is that it will have a higher cost of implementation than other ideas.",,,

@@ -1,0 +1,65 @@
+Opportunity ID,Name,Value,Units,Rationale,Sources
+OP-01,Implementation Cost,45000,GBP,Low complexity of checking account status,FA-12
+OP-01,Time Savings,34577,minutes,Savings on status checks on all cases over a whole year.,BM-18
+OP-01,Yearly Wage Savings,12678.23,GBP,Minutes saved turned into annual rep wages saved.,"FA-01, BM-01"
+OP-01,Recovery Uplift,0,GBP,No expected revenue uplift,
+OP-01,Additional Benefits,None,,,
+,,,,,
+,Conservative,Baseline,Optimistic,,
+annual total benefit,12678.23,12678.23,12678.23,,
+net benefit,-32321.77,-32321.77,-32321.77,,
+12-month ROI (%),28,28,28,,
+payback period (days),1295.5,1295.5,1295.5,,
+,,,,,
+Opportunity ID,Name,Value,Units,Rationale,Sources
+OP-02,Implementation Cost,45000,GBP,Low complexity of assigning statuses to cases,FA-12
+OP-02,Time Savings,42858.3,minutes,Savings on emails sent and spreadsheet reconciliation on straightforward cases over a whole year.,"FA-03, BM-13, BM-17"
+OP-02,Yearly Wage Savings,15714.71,GBP,Minutes saved turned into annual rep wages saved.,"FA-01, BM-01"
+OP-02,Recovery Uplift,0,GBP,No expected revenue uplift,
+OP-02,Additional Benefits,None,,,
+,,,,,
+,Conservative,Baseline,Optimistic,,
+annual total benefit,12406.35,15714.71,20677.25,,
+net benefit,-32593.65,-29285.29,-24322.75,,
+12-month ROI (%),28,35,46,,
+payback period (days),1323.9,1045.2,794.4,,
+,,,,,
+Opportunity ID,Name,Value,Units,Rationale,Sources
+OP-05,Implementation Cost,45000,GBP,Prioritisation of cases is a simple algorithm.,FA-12
+OP-05,Time Savings,18418.22,minutes,Savings on time reps spend unsure of next action for a year of straightforward cases.,"FA-03, BM-19"
+OP-05,Yearly Wage Savings,6753.35,GBP,Minutes saved turned into annual rep wages saved.,"FA-01, BM-01"
+OP-05,Recovery Uplift,0,GBP,No expected revenue uplift,
+OP-05,Additional Benefits,None,,,
+,,,,,
+,Conservative,Baseline,Optimistic,,
+annual total benefit,5331.592105,6753.35,8885.986842,,
+net benefit,-39668.40789,-38246.65,-36114.01316,,
+12-month ROI (%),12,15,20,,
+payback period (days),3080.7,2432.1,1848.4,,
+,,,,,
+Opportunity ID,Name,Value,Units,Rationale,Sources
+OP-06,Implementation Cost,85000,GBP,Medium complexity of building scheduling system.,FA-13
+OP-06,Time Savings,21848.48,minutes,Savings on making manual notes for a year of straightforward cases.,"FA-03, BM-19"
+OP-06,Yearly Wage Savings,8011.11,GBP,Minutes saved turned into annual rep wages saved.,"FA-01, BM-01"
+OP-06,Recovery Uplift,0,GBP,No expected revenue uplift,
+OP-06,Additional Benefits,Customer Satisfaction,,,
+,,,,,
+,Conservative,Baseline,Optimistic,,
+annual total benefit,6324.560526,8011.11,10540.93421,,
+net benefit,-78675.43947,-76988.89,-74459.06579,,
+12-month ROI (%),7,9,12,,
+payback period (days),4905.5,3872.7,2943.3,,
+,,,,,
+Opportunity ID,Name,Value,Units,Rationale,Sources
+OP-07,Implementation Cost,85000,GBP,Medium complexity of building new portal,FA-13
+OP-07,Time Savings,109544.12,minutes,"Savings on call attempts, emails sent, manual plan notes, spreadsheet reconciliations
+and status checks on straightforward cases over a whole year.","FA-03, BM-01, BM-12, BM-13, BM-15, BM-17, BM-18"
+OP-07,Yearly Wage Savings,40166.18,GBP,Minutes saved turned into annual rep wages saved.,"FA-01, BM-01"
+OP-07,Recovery Uplift,2371200,GBP,Baseline case with uplift from promise capture and plan selection. Annual figure.,"FA-03, FA-07, FA-08, FA-10, "
+OP-07,Additional Benefits,Customer Satisfaction,,,Analyst Observation
+,,,,,
+,Conservative,Baseline,Optimistic,,
+annual total benefit,2165790.142,2411366.18,2661170.237,,
+net benefit,2080790.142,2326366.18,2576170.237,,
+12-month ROI (%),2548,2837,3131,,
+payback period (days),14.3,12.9,11.7,,

@@ -1,0 +1,20 @@
+metric_id,metric_name,value,unit,source,notes
+BM-01,dataset_length,67,days,recovery activity tracker,The number of days of data in the recovery activity tracker
+BM-02,rep_actions,9890,actions,recovery activity tracker,The total amount of representative actions taken in the data
+BM-03,duplicated_actions,2020,actions,recovery activity tracker,The number of representative actions which were duplicated
+BM-04,awaiting_review,1233,actions,recovery activity tracker,The number of actions needing review after completion.
+BM-05,left_message,1249,actions,recovery activity tracker,Number of actions needed for times the representative left a message for a customer.
+BM-06,next_action_unclear,1275,actions,recovery activity tracker,Number of action where the next step was unclear.
+BM-07,no_reply,1201,actions,recovery activity tracker,Number of actions for cases which received no reply.
+BM-08,promise_to_pay,1195,actions,recovery activity tracker,Number of actions for cases resulting in a promise to pay.
+BM-09,sent_to_specialist,1268,actions,recovery activity tracker,Number of actions for cases sent to a specialist.
+BM-10,updating_row,1233,actions,recovery activity tracker,Number of actions needed for updating a row.
+BM-11,view_status,2468,actions,recovery activity tracker,Number of actions in order to view status of a case.
+BM-12,call_attempt,15312,minutes,recovery activity tracker,Total minutes spent attempting a call.
+BM-13,email_sent,7580,minutes,recovery activity tracker,Total minutes spent sending emails.
+BM-14,escalation,12025,minutes,recovery activity tracker,Total minutes spent on escalating a case.
+BM-15,manual_plan_note,10554,minutes,recovery activity tracker,Total minutes spent making a manual note of payment plans.
+BM-16,sms_reminder,4285,minutes,recovery activity tracker,Total minutes spent sending text reminders.
+BM-17,spreadsheet_reconcile,13123,minutes,recovery activity tracker,Total minutes spent reconciling spreadsheet trackers.
+BM-18,status_check,6347,minutes,recovery activity tracker,Total minutes spent checking account statuses.
+BM-19,next_action_unclear,8897,minutes,recovery activity tracker,Total rep minutes spend where the next action was unclear.

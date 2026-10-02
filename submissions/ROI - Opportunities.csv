@@ -1,0 +1,20 @@
+Opportunity ID,Opportunity,Steps Affected,JTBD Affected,Evidence,Stakeholders
+OP-01,Payment Fulfillment Check & Account Status,"Check whether the money has been paid in the legacy database
+Flag account or move on worklist",JTBD-04,"SN-034, SN-007","Collections Representative, Finance Analyst"
+OP-02,Automatic Case Assignment with Pre-Loaded Customer Details,"Receive next case from worklist
+Returns customer details
+Returns customer contact history",JTBD-04,"SN-008, SN-023","Operations Manager, Service Design Lead"
+OP-03,Automated Record Logging & System Synchronization,"Log contact attempt
+Create internal email-as-record-keeping
+Update tracker and legacy database",JTBD-05,"SN-008, SN-038","Operations Manager, Operations Analyst"
+OP-04,Automated Case Classification and Complexity Triage,"Check account legacy status
+Customer identity checked",JTBD-02,SN-038,Operations Analyst
+OP-05,Intelligent Case Prioritization and Contact Sequencing,"Receive the worklist
+Contact the customer",JTBD-03,"SN-007, SN-026",Finance Analyst
+OP-06,Automated Recontact Flagging and Follow-Up Scheduling,"Log contact attempt outcome
+Flag account or move on worklist
+Create scheduled callback reminder",JTBD-04,"SN-034, SN-007","Collections Representative, Finance Analyst"
+OP-07,Customer Self-Service Portal for Account Updates and Simplified Payment,"Contact the customer
+Negotiate payment options with customer
+Take arrangement details
+Receive payment","JTBD-01, JTBD-04","SN-008, SN-038, SN-023","Operations Manager, Operations Analyst, Service Design Lead"
